@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Cascadia+Code:ital,wght@0,200..700;1,200..700&family=Fira+Code:wght@300..700&family=IM+Fell+DW+Pica:ital@0;1&family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+body{
+    min-height: 675px;
+    display: flex;
+    border: 2px solid black;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+    row-gap :80px;
+    column-gap: 40px;
+    background-color: #102b56;
+}
+
+.hide{
+    width : 0px;
+    height: 0px;
+    margin: 0px ;
+    padding:0px;
+    background-color: #102b56;
+}
+
+.vinyl_cover{
+    position: relative;
+    width : 200px;
+    height : 200px;
+    font-size: 40pt;
+    top: -170px;
+    left: 0px;
+    border: 2px solid black;
+}
+
+.vinyl{
+    padding: 0px;
+}
+
+.vinyl_record{
+    position: relative;
+    width : 200px;
+    height : 200px;
+    top: 0px;
+    left: 3px;
+    font-size: 40pt;
+    transition: top 0.2s ease-out;
+}
+
+.vinyl:hover .vinyl_record{
+    position: relative;
+    top: -50px;
+
+}
+
+.vinyl{
+    width : 200px;
+    height : 200px;
+}
+
+@keyframes myAnimation {
+  0%   {top : 0px;}
+  100% {top : -50px;}
+}

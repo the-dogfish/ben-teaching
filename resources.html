@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources</title>
+    <script src="sortResources.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="resourceStyles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cascadia+Code:ital,wght@0,200..700;1,200..700&family=Fira+Code:wght@300..700&family=Happy+Monkey&family=IM+Fell+DW+Pica:ital@0;1&family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="fullTitle">
+        <div class="colourRed" >B</div>
+        <div  class="colourYellow">e</div>
+        <div  class="colourGreen">n</div>
+        <div  class="colourBlue">'s </div>
+        <div  class="colourRed">T</div>
+        <div  class="colourYellow">e</div>
+        <div  class="colourGreen">a</div>
+        <div  class="colourBlue">c</div>
+        <div  class="colourRed">h</div>
+        <div  class="colourYellow">i</div>
+        <div  class="colourGreen">n</div>
+        <div  class="colourBlue">g </div>
+        <div  class="colourRed">R</div>
+        <div  class="colourYellow">e</div>
+        <div  class="colourGreen">s</div>
+        <div  class="colourBlue">o</div>
+        <div  class="colourRed">u</div>
+        <div  class="colourYellow">r</div>
+        <div  class="colourGreen">c</div>
+        <div  class="colourBlue">e</div>
+        <div  class="colourRed">s</div>
+    </div>
+    <div class="controls">
+
+        
+        <div class="control" class="standardText">Search:
+            <input type="text" name="search" id="search" class="standardText"/>
+        </div>
+        <div class="control">Sort By:
+            <select name="sort" id="sort" class="standardText">
+                <option value="ID" class="standardText">Date Listened</option>
+                <option value="Artist" class="standardText">Artist</option>
+                <option value="Name" class="standardText">Album Name</option>
+                <option value="Score" class="standardText">Score</option>
+                <option value="Length" class="standardText">Length</option>
+                <option value="Year" class="standardText">Release Year</option>
+                <option value="Stone" class="standardText">Rolling Stone Top 500 Ranking</option>
+            </select>
+        </div>
+        <div class="control">Reverse Direction:
+            <label class="switch">
+                <input type="checkbox" name="order" id="order">
+                <span class="slider round"></span>
+            </label>
+        </div>
+        
+        <div class="control">Show:
+            <select name="displayType" id="displayType" class="standardText" onchange="delayedSearching()">
+                <option value="All" class="standardText">All Albums</option>
+                <option value="Month" class="standardText">By Listen Month</option>
+                <option value="Recommender" class="standardText">Recommendended By</option>
+                <option value="Artist" class="standardText">By Artist</option>
+                <option value="Decade" class="standardText">From Decade</option>
+                <option value="Genre" class="standardText">By Genre</option>
+                <option value="Country" class="standardText">By Location</option>
+                <option value="Revisited" class="standardText">Whether Revisited</option>
+                <option value="Collections" class="standardText">By Collection</option>
+            </select>
+        </div>
+        <div id="choosers"></div>
+    </div>
+    <div class="counter">
+    <div id="albumCount" class="topstats"></div>
+    </div>
+    <div id="albums" class="bigHolder"></div>
+    <div id="stats" class="stats"></div>
+
+            <div class="extraHolder">Dev Mode:
+            <label class="switchTwo">
+                <input type="checkbox" name="devm" id="devm">
+                <span class="slider round"></span>
+            </label>
+        </div>
+        <script src="sortResources.js"></script>
+</body>
+</html>
