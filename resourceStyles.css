@@ -20,6 +20,30 @@ input {
     font-size: 20px;
     font-family: mainFont;
 }
+
+.emptyButton{
+
+    width: 10rem;
+    background-color: #f0c3c3;
+    border: #eeacac 2px solid;
+    font-size: 20px;
+    font-family: mainFont;
+
+    padding: 5px;
+    margin-top: 4px;
+    margin-left: 4px;
+    margin-right : 4px;
+    margin-bottom : 4px;
+
+}
+
+.padded{
+    padding: 5px;
+    margin-top: 4px;
+    margin-left: 4px;
+    margin-right : 4px;
+    margin-bottom : 4px;
+}
 select {
     width: 10rem;
     background-color: #c3f0c6;
@@ -244,7 +268,7 @@ body {
 
 /*ALBUM STUFF*/
 .bigHolder{
-    min-height: 675px;
+    min-height: 420px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -274,8 +298,8 @@ body {
 .album{
      padding: 22px; 
      margin-bottom: 0px; 
-     width: 410px;
-     height: 410px;
+     width: 350px;
+     height: 350px;
      background-size: cover;
      margin-top: 40px;
     }
