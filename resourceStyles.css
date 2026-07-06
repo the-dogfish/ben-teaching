@@ -27,6 +27,14 @@ select {
     font-size: 20px;
     font-family: mainFont;
 }
+
+button {
+    width: 10rem;
+    background-color: #c3f0c6;
+    border: #b2eeac 2px solid;
+    font-size: 20px;
+    font-family: mainFont;
+}
 select>option {
     background-color: #b8e1ba;
 }

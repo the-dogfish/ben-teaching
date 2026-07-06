@@ -15,15 +15,8 @@ var albumCollections = {
 }
 
 var albumsById = {
-"00001":{"Name": "Ordering Numbers","Umbrella": "Number","Lesson": "","Exericses": "","Colouring": "","Description": "..."},
-"00002":{"Name": "Applying Operations","Umbrella": "Number","Lesson": "","Exericses": "","Colouring": "","Description": "..."},
-"00003":{"Name": "Simplifying","Umbrella": "Number","Lesson": "","Exericses": "","Colouring": "","Description": "..."},
-"00004":{"Name": "Vocabulary","Umbrella": "Number","Lesson": "","Exericses": "","Colouring": "","Description": "..."},
-"00005":{"Name": "Product Rule for counting","Umbrella": "Number","Lesson": "","Exericses": "","Colouring": "","Description": "..."},
-"00006":{"Name": "Estimation","Umbrella": "Number","Lesson": "","Exericses": "","Colouring": "","Description": "..."},
-"00007":{"Name": "Standard Units","Umbrella": "Measures and accuracy","Lesson": "","Exericses": "","Colouring": "","Description": "..."},
-"00008":{"Name": "Bounds","Umbrella": "Measures and accuracy","Lesson": "","Exericses": "","Colouring": "","Description": "test"},
-
+"00001":{"Name": "Ordering Numbers","Umbrella":  "Number","Lesson": "","Exericses": "Ordering_Numbers_Worksheet","Colouring": "","Description": "Ordering positive and negative integers, decimals and fractions."},
+"00002":{"Name": "Understanding Inequalities","Umbrella":  "Number","Lesson": "","Exericses": "Understanding_Inequalities_Worksheet","Colouring": "","Description": "Understanding and using the symbols for equal, not equal, less than, greater than, strictly less than, and strictly greater than (=, ≠, ≤, ≥, <, >)."},
 };
 
 
@@ -158,7 +151,7 @@ function searching(){
   display(CriteriaData);  /*Display Sorting Data*/
 }
 
-/*THIS CONTROLS CREATING THE DROPDOWN MENUS, such as the list of artists*/
+/*THIS CONTROLS CREATING THE DROPDOWN MENUS, such as the list of topics*/
 function displayDropdown(){
 
     var SearchString  = $('#search').val().toUpperCase();  /*Uppercase for Case Insentive*/
@@ -271,13 +264,13 @@ function displayDropdown(){
     }
 }
 
-/*THIS DISPLAYS THE ALBUMS, AND THE STATS*/
+/*THIS DISPLAYS THE TOPICS*/
 function display(Data){
     var html = '';
      var devMode = $('#devm').is(":checked");
   //this part controls the display of albums
   for(var i=0; i<Data.length;i++){
-    html+='<div class="album album_' + (i % 7).toString() + '">';//determines which border we give this album
+    html+='<div class="album album_' + (i % 7).toString() + '">';//determines which border we give this topic
 
     if (devMode){
       html+='<p class="name">'+Data[i].Name+ ' - ID: ' + Data[i].ID + '</p>';
@@ -289,6 +282,9 @@ function display(Data){
       html+='<p class="artist">Topic: '+Data[i].Umbrella+'</p>';
 
       html+='<p class="boldText">'+Data[i].Description+'</p>';
+      if (Data[i].Exericses.length >= 1){
+              html += '<button type="submit" onclick="window.open(\'pdfs/' + Data[i].Exericses + '.pdf\')">Open Worksheet</button>'
+      }
       html+='</div>';
   };
   $('#albums').html(html);
