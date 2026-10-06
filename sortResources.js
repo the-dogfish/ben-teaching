@@ -166,6 +166,7 @@ var albumsById = {
 "00148":{"Name": "Scatter Graphs","Umbrella": "Statistics","Area": "","Lesson": "","Exericses": "","Colouring": "","Tier": "F","Description": ""},
 "00149":{"Name": "Lines of Best Fit","Umbrella": "Statistics","Area": "","Lesson": "","Exericses": "","Colouring": "","Tier": "F","Description": ""},
 "00150":{"Name": "Understanding Statistical Language","Umbrella": "Statistics","Area": "","Lesson": "","Exericses": "","Colouring": "","Tier": "F","Description": ""},
+"00151":{"Name": "Beatles Puzzle","Umbrella": "Puzzles","Area": "","Lesson": "","Exericses": "the_beatles_problem","Colouring": "","Tier": "F","Description": ""},
 
 
 };
